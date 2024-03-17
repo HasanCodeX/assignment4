@@ -149,7 +149,161 @@
                 });
             </script>
         </section>
-        <!--main section-->
+        <!--offer section-->
+        <!DOCTYPE html>
+        <html lang="en">
+        
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Best Offers for You</title>
+            <style>
+                /* CSS for the section */
+                .offers-section {
+                    padding: 50px;
+                    background-color: #f9f9f9;
+                    text-align: center;
+                }
+        
+                .offer-container {
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 30px;
+                    flex-wrap: wrap;
+                }
+        
+                .offer {
+                    width: 300px;
+                    padding: 20px;
+                    border-radius: 10px;
+                    background-color: #fff;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    margin-bottom: 20px;
+                }
+        
+                .offer h2 {
+                    color: #333;
+                    margin-bottom: 10px;
+                }
+        
+                .coupon {
+                    padding: 10px;
+                    margin-bottom: 15px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s;
+                    cursor: pointer;
+                }
+        
+                .coupon p {
+                    margin: 5px 0;
+                }
+        
+                .coupon:hover {
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+        
+                /* Colors */
+                .yellow {
+                    background-color: #ffd700; /* Yellow color for the first cart */
+                }
+        
+                .pink {
+                    background-color: #ff69b4; /* Pink color for the second cart */
+                    color: #fff;
+                }
+        
+                .see-offers {
+                    background-color: #007bff;
+                    color: #fff;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                    margin-top: 20px;
+                }
+        
+                .see-offers:hover {
+                    background-color: #0056b3;
+                }
+            </style>
+        </head>
+        
+        <body>
+            <section class="offers-section">
+                <h1>Best Offers for You</h1>
+                <div class="offer-container">
+                    <div class="offer">
+                        <h2>Coupon 1: NEW15</h2>
+                        <div class="coupon yellow" onclick="showDetails('new15')">
+                            <p>Coupon Code</p>
+                            <p><strong>NEW15</strong></p>
+                            <p>Get 15% OFF on your next purchase</p>
+                            <p>Use by January 2024</p>
+                        </div>
+                        <div id="new15Details" style="display: none;">
+                            <p>Enter code 'NEW15' during checkout.</p>
+                        </div>
+                    </div>
+                    <div class="offer">
+                        <h2>Coupon 2: Couple 20</h2>
+                        <div class="coupon pink" onclick="showDetails('couple20')">
+                            <p>Coupon Code</p>
+                            <p><strong>Couple 20</strong></p>
+                            <p>Get 20% OFF on your next purchase</p>
+                            <p>Use by January 2024</p>
+                        </div>
+                        <div id="couple20Details" style="display: none;">
+                            <p>Enter code 'Couple 20' during checkout.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="see-offers" onclick="showAllOffers()">See All Offers</button>
+                <div id="allOffers" style="display: none;">
+                    <div class="offer">
+                        <h2>Coupon 1: NEW15</h2>
+                        <div class="coupon yellow">
+                            <p>Coupon Code</p>
+                            <p><strong>NEW15</strong></p>
+                            <p>Get 15% OFF on your next purchase</p>
+                            <p>Use by January 2024</p>
+                        </div>
+                    </div>
+                    <div class="offer">
+                        <h2>Coupon 2: Couple 20</h2>
+                        <div class="coupon pink">
+                            <p>Coupon Code</p>
+                            <p><strong>Couple 20</strong></p>
+                            <p>Get 20% OFF on your next purchase</p>
+                            <p>Use by January 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <script>
+                function showDetails(coupon) {
+                    var details = document.getElementById(coupon + 'Details');
+                    if (details.style.display === 'none') {
+                        details.style.display = 'block';
+                    } else {
+                        details.style.display = 'none';
+                    }
+                }
+        
+                function showAllOffers() {
+                    var allOffers = document.getElementById('allOffers');
+                    if (allOffers.style.display === 'none') {
+                        allOffers.style.display = 'block';
+                    } else {
+                        allOffers.style.display = 'none';
+                    }
+                }
+            </script>
+        </body>
+        
+        </html>
+                
     </main>
 
 </body>
